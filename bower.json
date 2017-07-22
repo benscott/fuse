@@ -1,0 +1,30 @@
+{
+  "name": "fuse",
+  "description": "Fuse Framework",
+  "main": "",
+  "authors": [
+    "benscott <ben@benscott.co.uk>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sparkd/fuse",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "boostrap#^3.3.7"
+  },
+   "overrides":{
+      "bootstrap" : {
+           "main": [
+              "less/bootstrap.less",
+              "dist/css/bootstrap.css",
+              "dist/js/bootstrap.js"
+            ]
+      }
+    }  
+}
