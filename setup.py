@@ -9,7 +9,7 @@ setup(
     packages=[
         'fuse',
         'fuse.api',
-        'fuse.schema',
+        # 'fuse.schema',
         'fuse.application'
     ],
     install_requires=[],

@@ -24,7 +24,7 @@ class APIResource(Resource):
     def __init__(self, slug):
         """
         Load the schema for this resource
-        :param slug: Schema slog
+        :param slug: Schema slug
         """
         self.slug = slug
 

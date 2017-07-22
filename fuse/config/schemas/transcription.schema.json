@@ -1,0 +1,18 @@
+{
+	"type" : "object",
+	"properties": {
+		"barcode": {
+			"type": "number"
+		},
+		"country": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"ip": {
+			"type": "string"
+		}
+    },
+	"required": ["barcode", "country", "url"]
+}
