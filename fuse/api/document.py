@@ -69,6 +69,7 @@ class Document(object):
                 path=':'.join(err.path),
                 error=err.message
             )
+            print(msg)
             raise APIValidationException(msg)
 
     @staticmethod

@@ -126,7 +126,7 @@ class ListAPIResource(APIResource):
          description: Creates a {slug} record
          ---
         """
-        data = request.get_json()
+        data = request.get_json() or dict(request.form)
         result = Document(self.slug).create(data)
         return self.success(inserted_id=result.inserted_id)
 

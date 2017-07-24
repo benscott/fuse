@@ -7,6 +7,8 @@ Created by Ben Scott on '07/02/2017'.
 from fuse.api.schema import Schema
 from fuse.api.resource import RecordAPIResource, ListAPIResource, SchemaAPIResource
 
+# FIXME: Yuk
+from fuse.resources import CustomAPIResource
 
 def list_resources(app):
     """
@@ -20,6 +22,7 @@ def list_resources(app):
         # FIXME: Update <str:id> to ensure mongo GUID
         '/{slug}/<string:identifier>/': RecordAPIResource,
         '/{slug}/': ListAPIResource,
+        '/{slug}/not-transcribed': CustomAPIResource,
         '/{slug}.schema.json': SchemaAPIResource
     }
 
