@@ -10,4 +10,4 @@ CONFIG = DevelopmentConfig if get_debug_flag() else ProductionConfig
 app = app_factory(CONFIG)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
