@@ -7,6 +7,7 @@ Override default resource behaviour
 
 """
 
+import random
 from flask import request, jsonify
 
 from fuse.api.schema import Schema
@@ -25,13 +26,17 @@ class CustomAPIResource(APIResource):
          ---
         """
 
+        # Prevent multiple people working on same doc
+        limit = 10
+        skip = random.randint(1, limit)
+
         # Query MongoDB - gets result cursor
-        record = Collection(self.slug).find_one({'country': {'$exists': None}})
+        record = Collection(self.slug).find({'country': {'$exists': None}}).limit(limit).skip(skip)
 
         # Return JSON dict of records and total
         # Explicity pass through jsonify so it uses custom JSONEncoder
         return jsonify({
             'total': 1 if record else 0,
             'schema': Schema().load(self.slug),
-            'record': record
+            'record': record[0]
         })
