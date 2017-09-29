@@ -1,18 +1,18 @@
 {
 	"type" : "object",
 	"properties": {
+		"day": {
+			"type": "string"
+		},
+		"month": {
+			"type": "string"
+		},
+		"year": {
+			"type": "string"
+		},
 		"barcode": {
-			"type": "string"
-		},
-		"country": {
-			"type": "string"
-		},
-		"url": {
-			"type": "string"
-		},
-		"ip": {
 			"type": "string"
 		}
     },
-	"required": ["barcode", "url"]
+	"required": ["barcode", "day", "month", "year"]
 }

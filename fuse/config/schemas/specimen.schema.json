@@ -1,0 +1,15 @@
+{
+	"type" : "object",
+	"properties": {
+		"file_name": {
+			"type": "string"
+		},
+		"barcode": {
+			"type": "string"
+		},
+		"transcription_count": {
+			"type": "integer"
+		}
+    },
+	"required": ["barcode", "file_name"]
+}

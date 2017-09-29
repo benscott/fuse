@@ -22,7 +22,8 @@ def list_resources(app):
         # FIXME: Update <str:id> to ensure mongo GUID
         '/{slug}/<string:identifier>/': RecordAPIResource,
         '/{slug}/': ListAPIResource,
-        '/{slug}/not-transcribed': CustomAPIResource,
+        '/{slug}/transcription': CustomAPIResource,
+        '/{slug}/transcription/<string:identifier>/': CustomAPIResource,
         '/{slug}.schema.json': SchemaAPIResource
     }
 
